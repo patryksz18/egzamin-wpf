@@ -17,6 +17,7 @@ namespace WpfApp14
     public partial class MainWindow : Window
     {
         int ilosc_znakow;
+        string haslo;
         public MainWindow()
         {
             InitializeComponent();
@@ -26,9 +27,31 @@ namespace WpfApp14
         {
             int.TryParse(ile_znakow.Text, out ilosc_znakow);
             Random rnd = new Random();
-            string litery = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
-            string liczby = "1234567890";
-            string znaki_specjalne = "!@#$%^&*()";
+            string[] litery = { "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM" };
+            string[] cyfry = { "1234567890" };
+            string[] znaki_specjalne = { "!@#$%^&*()_+-=" };
+            for (int i = 0; i <= ilosc_znakow; i++)
+            {
+                if (litery_chb.IsChecked == true)
+                {
+                    haslo += litery[rnd.Next(litery.Length)];
+
+                }
+                else if (cyfry_chb.IsChecked == true) 
+                {
+                    haslo += cyfry[rnd.Next(cyfry.Length)];
+                }
+                else if (znaki_specjalne_chb.IsChecked == true)
+                {
+                    haslo += znaki_specjalne[rnd.Next(znaki_specjalne.Length)];
+                }
+            }
+            MessageBox.Show(haslo);
+        }
+
+        private void btn_zatwierdz_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Dane pracownika:" + imie.Text + nazwisko.Text + stanowisko_combo.SelectedItem + "haslo" + haslo );
         }
     }
 }
