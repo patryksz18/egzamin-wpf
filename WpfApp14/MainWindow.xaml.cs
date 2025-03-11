@@ -51,7 +51,7 @@ namespace WpfApp14
 
         private void btn_zatwierdz_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Dane pracownika:" + imie.Text + nazwisko.Text + stanowisko_combo.SelectedItem + "haslo" + haslo );
+            MessageBox.Show("Dane pracownika:" + imie.Text + " " + nazwisko.Text+ " " + stanowisko_combo.SelectedItem + " haslo:" + haslo );
         }
     }
 }
