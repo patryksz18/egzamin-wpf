@@ -10,8 +10,8 @@
         <Grid>
             <GroupBox Header="Dane pracownika" Margin="10,43,500,136">
                 <Grid>
-                    <TextBox x:Name="imie" HorizontalAlignment="Left" Margin="139,31,0,176" TextWrapping="Wrap" Width="126"/>
-                    <Label Content="Imie" Margin="26,29,173,173" IsEnabled="False" Foreground="Black"/>
+                    <TextBox x:Name="imie" HorizontalAlignment="Left" Margin="139,31,0,176" TextWrapping="Wrap" Width="126" Height="22"/>
+                    <Label Content="Imie" Margin="26,29,173,173" IsEnabled="False" Foreground="Black" Width="100" Height="22"/>
                     <TextBox x:Name="nazwisko" HorizontalAlignment="Left" Margin="139,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" Height="22"/>
                     <Label Content="Nazwisko" HorizontalAlignment="Left" Margin="10,83,0,0" VerticalAlignment="Top" Height="22" Width="112" IsEnabled="False" Foreground="Black"/>
                     <ComboBox x:Name="stanowisko_combo" HorizontalAlignment="Left" Margin="139,133,0,0" VerticalAlignment="Top" Width="120">
