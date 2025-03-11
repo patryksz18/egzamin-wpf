@@ -16,9 +16,19 @@ namespace WpfApp14
     /// </summary>
     public partial class MainWindow : Window
     {
+        int ilosc_znakow;
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void btn_generuj_Click(object sender, RoutedEventArgs e)
+        {
+            int.TryParse(ile_znakow.Text, out ilosc_znakow);
+            Random rnd = new Random();
+            string litery = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
+            string liczby = "1234567890";
+            string znaki_specjalne = "!@#$%^&*()";
         }
     }
 }
